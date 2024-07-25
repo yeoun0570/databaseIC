@@ -87,6 +87,3 @@ ALTER TABLE job_history ADD foreign key (department_id) references departments(d
 
 
 
-
-
-
