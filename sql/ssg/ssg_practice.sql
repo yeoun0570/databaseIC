@@ -116,7 +116,9 @@ select
 	concat('$', format(avg(salary), 2)) as 'Average Salary',
 	concat('$', format(max(salary), 2)) as 'Max Salary',
 	concat('$', format(min(salary), 2)) as 'Min Salary'
-from employees;
+from employees
+group by department_id
+order by department_id;
 
 -- [문제 2] 사원들의 업무별 전체 급여 평균이 $10,000보다 큰 경우를 조회하여 업무, 급여 평균을 출력하시오. 
 -- 단 업무에 사원(CLERK)이 포함된 경우는 제외하고 전체 급여 평균이 높은 순서대로 출력하시오
