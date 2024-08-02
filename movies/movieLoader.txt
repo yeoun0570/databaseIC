@@ -1,0 +1,14 @@
+LOAD DATA
+INFILE 'movieRecords.txt'
+  INTO TABLE movieTBL
+  FIELDS TERMINATED BY ','
+  (  movie_id        CHAR(4),
+     movie_title      CHAR(30),
+     movie_director CHAR(20),
+     movie_star      CHAR(20),
+     scriptFname    FILLER CHAR(80),
+     filmFname      FILLER CHAR(80),
+     movie_script   LOBFILE(scriptFname) TERMINATED BY EOF,
+     movie_film     LOBFILE(filmFname) TERMINATED BY EOF
+)DEFAULT CHARSET = utf8mb4;
+
