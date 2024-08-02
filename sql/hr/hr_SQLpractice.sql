@@ -4,7 +4,7 @@
   Oxford에 근무하는 사원의 성과 이름(Name으로 별칭), 업무, 부서명, 도시명을 출력하시오.
   이때 첫 번째 열은 회사명인 'Han-Bit'이라는 상수값이 출력되도록 하시오
  */
-SELECT 'Han-bit'                              AS company
+SELECT 'Han-bit' AS company
      , CONCAT(e.first_name, ' ', e.last_name) AS Name
      , e.job_id
      , d.department_name
